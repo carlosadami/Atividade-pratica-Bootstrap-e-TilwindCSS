@@ -1,0 +1,194 @@
+/* =========================================================
+   CSS próprio da versão Bootstrap
+   O Bootstrap não tem as cores do café, então criei variáveis
+   e algumas classes novas para usar junto com as do Bootstrap.
+   ========================================================= */
+
+:root {
+  --cafe: #2b1b12;
+  --cafe-escuro: #1e130c;
+  --caramelo: #c8873a;
+  --caramelo-escuro: #a96d27;
+  --creme: #f7efe5;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #3b2a20;
+}
+
+.titulo {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+/* espaçamento maior que o py-5 do Bootstrap */
+.py-6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* ---------- cores ---------- */
+.bg-cafe { background-color: var(--cafe); }
+.bg-cafe-escuro { background-color: var(--cafe-escuro); }
+.bg-creme { background-color: var(--creme); }
+.bg-caramelo { background-color: var(--caramelo); }
+.bg-caramelo-suave { background-color: rgba(200, 135, 58, 0.15); }
+.text-caramelo { color: var(--caramelo); }
+.text-cafe { color: var(--cafe); }
+
+.subtitulo {
+  color: var(--caramelo);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ---------- botões ---------- */
+.btn-caramelo {
+  background-color: var(--caramelo);
+  color: #fff;
+  border: none;
+}
+.btn-caramelo:hover {
+  background-color: var(--caramelo-escuro);
+  color: #fff;
+}
+.btn-cafe {
+  background-color: var(--cafe);
+  color: #fff;
+}
+.btn-cafe:hover {
+  background-color: var(--caramelo);
+  color: #fff;
+}
+.link-caramelo {
+  color: var(--caramelo);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ---------- menu ---------- */
+.navbar {
+  transition: padding 0.3s, box-shadow 0.3s;
+}
+/* classe adicionada pelo JavaScript quando a página rola */
+.navbar.rolou {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.navbar .nav-link:hover {
+  color: var(--caramelo) !important;
+}
+
+/* ---------- banner ---------- */
+.hero {
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background: radial-gradient(circle at 80% 30%, #5a3a24 0%, var(--cafe) 55%);
+}
+.cartao-destaque {
+  background-color: #fff;
+  max-width: 360px;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  transform: rotate(3deg);
+  transition: transform 0.3s;
+}
+.cartao-destaque:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+.xicara-grande {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+/* ---------- serviços ---------- */
+.card-servico {
+  background-color: var(--creme);
+  border-radius: 1.25rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-servico:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(43, 27, 18, 0.15);
+}
+.icone-circulo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--caramelo);
+  color: #fff;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.icone-circulo.pequeno {
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
+}
+
+/* ---------- cardápio ---------- */
+.abas .nav-link {
+  color: var(--cafe);
+  border-radius: 50rem;
+  padding: 0.5rem 1.8rem;
+  font-weight: 500;
+}
+.abas .nav-link.active {
+  background-color: var(--cafe);
+}
+.item-cardapio {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.emoji-item {
+  font-size: 2rem;
+}
+.item-cardapio code {
+  color: var(--caramelo);
+  font-size: 0.75rem;
+}
+.preco {
+  color: var(--caramelo);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---------- depoimentos ---------- */
+.card-depoimento {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  border-radius: 1.25rem;
+}
+.estrelas {
+  color: var(--caramelo);
+  letter-spacing: 3px;
+}
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--caramelo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* ---------- formulário ---------- */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--caramelo);
+  box-shadow: 0 0 0 0.25rem rgba(200, 135, 58, 0.25);
+}
